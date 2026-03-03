@@ -1,3 +1,4 @@
+
 # Requerimientos
 
 - MySQL instalado en su sistema. Desarrollado con Ver 8.0.31 for Win64 on x86_64 (MySQL Community Server - GPL).
@@ -23,7 +24,7 @@
    source ruta_del_script_creacion_bd.sql
    ```
 
-   Ejemplo: `D:\SRC\GitHub\tonysoft2018\tesffullstack\bd\script_creacion_bd.sql`
+   Ejemplo: `C:tesffullstack\bd\db_ruiz.sql`
 
 4. Cambiar a la base de datos recién creada:
 
