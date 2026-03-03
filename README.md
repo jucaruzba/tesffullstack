@@ -24,7 +24,7 @@
    source ruta_del_script_creacion_bd.sql
    ```
 
-   Ejemplo: `D:\SRC\GitHub\tonysoft2018\tesffullstack\bd\script_creacion_bd.sql`
+   Ejemplo: `C:tesffullstack\bd\db_ruiz.sql`
 
 4. Cambiar a la base de datos recién creada:
 
