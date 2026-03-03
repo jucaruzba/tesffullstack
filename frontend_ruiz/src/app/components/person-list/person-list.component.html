@@ -1,0 +1,40 @@
+<div class="container mt-5">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="text-primary">Listado de Personas</h2>
+    <button routerLink="/person/new" class="btn btn-success">
+      <i class="bi bi-plus-circle"></i> Crear Persona
+    </button>
+  </div>
+
+  <div class="card shadow">
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead class="table-dark">
+          <tr>
+            <th>ID</th>
+            <th>Nombre Completo</th>
+            <th>Puesto</th>
+            <th>Sueldo</th>
+            <th class="text-center">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of persons">
+            <td>{{ p.id }}</td>
+            <td>{{ p.nombre }} {{ p.apellido }}</td>
+            <td><span class="badge bg-info text-dark">{{ p.puesto }}</span></td>
+            <td>{{ p.sueldo | currency }}</td>
+            <td class="text-center">
+              <button [routerLink]="['/person/edit', p.id]" class="btn btn-warning btn-sm me-2">
+                Editar
+              </button>
+              <button (click)="deletePerson(p.id!)" class="btn btn-danger btn-sm">
+                Borrar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

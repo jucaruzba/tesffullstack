@@ -1,0 +1,98 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow border-0">
+        <div class="card-header bg-primary text-white py-3">
+          <h4 class="mb-0 text-center">
+            {{ isEdit ? "Actualizar Perfil" : "Registro de Persona" }}
+          </h4>
+        </div>
+        <div class="card-body p-4">
+          <form [formGroup]="personForm" (ngSubmit)="save()">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label fw-bold">Nombre</label>
+                <input
+                  type="text"
+                  formControlName="nombre"
+                  class="form-control"
+                  [class.is-invalid]="
+                    personForm.get('nombre')?.invalid &&
+                    personForm.get('nombre')?.touched
+                  "
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label fw-bold">Apellido</label>
+                <input
+                  type="text"
+                  formControlName="apellido"
+                  class="form-control"
+                  [class.is-invalid]="
+                    personForm.get('apellido')?.invalid &&
+                    personForm.get('apellido')?.touched
+                  "
+                />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-bold">Fecha de Nacimiento</label>
+              <input
+                type="date"
+                formControlName="fechaNacimiento"
+                class="form-control"
+                [class.is-invalid]="
+                  personForm.get('fechaNacimiento')?.invalid &&
+                  personForm.get('fechaNacimiento')?.touched
+                "
+              />
+              <div class="form-text text-muted">
+                Seleccione su fecha en el calendario.
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label fw-bold">Puesto</label>
+                <input
+                  type="text"
+                  formControlName="puesto"
+                  class="form-control"
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label fw-bold">Sueldo</label>
+                <div class="input-group">
+                  <span class="input-group-text bg-light">$</span>
+                  <input
+                    type="number"
+                    formControlName="sueldo"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-end mt-4">
+              <button
+                type="button"
+                routerLink="/persons"
+                class="btn btn-outline-secondary me-2 px-4"
+              >
+                Cancelar
+              </button>
+              <button
+                type="submit"
+                class="btn btn-primary px-4"
+                [disabled]="personForm.invalid"
+              >
+                {{ isEdit ? "Guardar Cambios" : "Registrar Persona" }}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
