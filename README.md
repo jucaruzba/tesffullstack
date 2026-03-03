@@ -19,9 +19,12 @@ Solución para Prueba Técnica Fullstack desarrollada con Java 21 y Spring Boot.
 
 ### 1. Clonación del Proyecto
 
-git clone https://github.com/tonysoft2018/tesffullstack
+git clone https://github.com/jucaruzba/tesffullstack
+
 cd tesffullstack
+
 git checkout ruiz_backend
+
 cd ruiz_backend
 
 ### 2. Conexión a Base de Datos
