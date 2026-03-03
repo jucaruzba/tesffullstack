@@ -24,9 +24,12 @@ Interfaz administrativa moderna desarrollada en Angular 18 para la gestión de p
 
 ### 2. Despliegue Local
 
-git clone https://github.com/tonysoft2018/tesffullstack
+git clone https://github.com/jucaruzba/tesffullstack
+
 cd tesffullstack
+
 git checkout ruiz_frontend
+
 cd ruiz_frontend
 
 ### 3. Instalación de Dependencias
