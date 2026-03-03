@@ -6,35 +6,42 @@
 # Despliegue y Ejecución
 
 1. Clonar este repositorio:
+
    ```
    git clone https://github.com/usuario/repositorio.git
    ```
 
 2. Iniciar sesión en MySQL como usuario root:
+
    ```
    mysql -u root -p
    ```
 
 3. Cargar el script de creación de la base de datos:
+
    ```
    source ruta_del_script_creacion_bd.sql
    ```
+
    Ejemplo: `D:\SRC\GitHub\tonysoft2018\tesffullstack\bd\script_creacion_bd.sql`
 
 4. Cambiar a la base de datos recién creada:
+
    ```
-   USE bd_garcia;
+   USE bd_ruiz;
    ```
 
 5. Ejecutar la consulta para verificar los datos en la tabla person:
+
    ```
    SELECT * FROM person;
    ```
 
 6. Crear un nuevo usuario para la conexión del backend y otorgarle privilegios:
+
    ```
    CREATE USER 'conexion'@'localhost' IDENTIFIED BY 'Wk2!rT8s@6w';
-   GRANT ALL PRIVILEGES ON bd_garcia.* TO 'conexion'@'localhost';
+   GRANT ALL PRIVILEGES ON bd_ruiz.* TO 'conexion'@'localhost';
    FLUSH PRIVILEGES;
    ```
 
